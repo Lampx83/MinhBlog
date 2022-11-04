@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Hướng dẫn thiết kế Website">
+    <meta name="keywords" content="HTML, CSS, JavaScript ">
+    <meta name="author" content="Dương Minh">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <title>Đăng ký</title>
+    <link href="css/style2.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="flex-container">
+    <header class="feature2">
+        <h1>Minh's Page</h1>
+        <p>Lập kế hoạch - Ghi chú thích - <b>Viết mã lệnh</b> - Kiểm thử</p>
+    </header>
+    <nav>
+        <a href="index2.html">Trang chủ</a>
+        <a href="#">Bài viết</a>
+        <a href="#">Dự án</a>
+        <a href="register.html">Đăng ký khóa học</a>
+        <div class="search">
+            <input type="search">
+        </div>
+    </nav>
+
+    <div class="feature">
+        <div class="ad-course">
+            <h3>Thiết kế Web</h3>
+            <img src="images/a1.png" alt="Web Development">
+            <p>Thiết kế và lập trình Web</p>
+        </div>
+        <div class="ad-course">
+            <h3>UI Design</h3>
+            <img src="images/a2.png"  alt="UI Design">
+            <p>Thiết kế giao diện tương tác</p>
+        </div>
+        <div class="ad-course">
+            <h3>Python</h3>
+            <img src="images/a3.png"  alt="Python">
+            <p>Trí tuệ nhân tạo, học máy</p>
+        </div>
+        <div class="ad-course">
+            <h3>Công nghệ 4.0</h3>
+            <img src="images/a4.png"  alt="Công nghệ 4.0">
+            <p>Chuyển đổi số, IoT, Cloud</p>
+
+        </div>
+    </div>
+
+    <main id = "register-form">
+        <form action="/submit.php" method="post" accept-charset="utf-8" autocomplete="on">
+            <input type="hidden" name="userID" value="23114306030131">
+            <h1>Đăng ký khóa học</h1>
+            <div class="form-block">
+                <div class="form-subblock user-info">
+                    <div>
+                        <label for="last_name">Họ đệm</label>
+                        <input type="text" id="last_name" size="15">
+                    </div>
+                    <div>
+                        <label class="form-sub-label" for="last_name">Tên</label>
+                        <input type="text" id="first_name" size="15">
+                    </div>
+
+                </div>
+                <div class="form-subblock">
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div>
+                        <label for="phone">Điện thoại</label> <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    </div>
+                    <div>
+                        <label class="form-label form-label-top" for="gender">Giới tính</label>
+                        <select class="form-dropdown" id="gender">
+                            <option value="Male">Nam</option>
+                            <option value="Female">Nữ</option>
+                            <option value="N/A">Khác</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="age">Tuổi</label> <input type="number" id="age" min="18" max="99">
+                    </div>
+                </div>
+
+                <div class="form-subblock">
+                    <div>
+                        <label for="course-select">Chọn khóa học:</label>
+                        <select id="course-select">
+                            <optgroup label="Khóa học lập trình">
+                                <option>Python</option>
+                                <option>Java</option>
+                                <option>JavaScript</option>
+                            </optgroup>
+                            <optgroup label="Cơ sở dữ liệu">
+                                <option>MySQL</option>
+                                <option>SQL Server</option>
+                                <option>MongoDB</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="city">Cơ sở học:</label>
+                        <input list="cities" name="city" id="city">
+                        <datalist id="cities">
+                            <option value="Hà Nội">
+                            <option value="Thành phố Hồ Chí Minh">
+                            <option value="Đà Nẵng">
+                            <option value="Hải Phòng">
+                            <option value="Cần Thơ">
+                        </datalist>
+                    </div>
+                </div>
+                <div class="form-subblock">
+                    <div>
+                        <label>Ca học</label>
+                        <div class="option">
+                            <input type="checkbox" name="ca" value="male" id="sang" checked><label for="sang">Sáng</label>
+                            <input type="checkbox" name="ca" value="female" id="chieu"><label for="chieu">Chiều</label>
+                            <input type="checkbox" name="ca" value="other" id="toi"><label for="toi">Tối</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Hình thức học</label>
+                        <div class="option">
+                            <input type="radio" name="ca" value="male" id="online" checked><label for="online">Trực tuyến</label>
+                            <input type="radio" name="ca" value="female" id="offline"><label for="offline">Tại cơ sở</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Ngày bắt đầu</label>
+                        <input type="date" name="start_date">
+                    </div>
+                </div>
+                <div class="form-subblock">
+                    <div>
+                        <label for="request">Các yêu cầu khác</label>
+                        <textarea id="request" name="request" style="display: block"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-block-button" style="margin-top: 40px">
+                <div>
+                    <input type="reset" value="Nhập lại">
+                </div>
+                <div>
+                    <input type="submit" value="Đăng ký">
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <img src="images/social.svg" alt="Social">
+            <form>
+                <input type="email" name="email" placeholder="Địa chỉ email">
+                <input type="submit" value="Nhận thông báo">
+            </form>
+
+        </div>
+        <div class="legal">
+            &copy; 2022 Bản quyền thuôc về Minh's Blogs
+        </div>
+    </footer>
+</div>
+</body>
+</html>

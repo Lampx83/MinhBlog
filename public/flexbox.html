@@ -1,0 +1,166 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        h1 {
+            color: #1abc9c;
+            text-align: center;
+            margin: 0;
+            margin-top: 30px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .flex-container .chilld {
+
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .note {
+            text-align: center;
+            min-width: 180px;
+            padding: 10px;
+        }
+
+        .flex-container1 {
+            display: flex;
+            background-color: #1abc9c;
+            height: 200px;
+        }
+
+        .flex-container2 {
+            display: flex;
+            background-color: #1abc9c;
+            height: 200px;
+        }
+
+        .flex-container3 {
+            flex-grow: 1;
+            display: flex;
+            background-color: #1abc9c;
+            height: 200px;
+        }
+
+        .flex-container4 {
+            flex-grow: 1;
+            display: flex;
+            background-color: #1abc9c;
+            height: 200px;
+        }
+
+        .flex-container5 {
+            flex-grow: 1;
+            display: flex;
+            background-color: #1abc9c;
+            height: 200px;
+
+
+
+        }
+
+        .flex-container6 {
+            flex-grow: 1;
+            display: flex;
+            background-color: #1abc9c;
+            flex-wrap: wrap;
+
+        }
+        .flex-container1 .item {
+            align-self:stretch ;
+        }
+        .flex-container2 .item {
+            align-self:center ;
+        }
+
+        .flex-container3 .item {
+            align-self:flex-start ;
+        }
+
+        .flex-container4 .item {
+            align-self:flex-end ;
+        }
+
+        .flex-container5 .item {
+            align-self:baseline ;
+        }
+        div.item {
+            background-color: white;
+            margin: 5px;
+            padding: 20px;
+        }
+        div.item:nth-child(1){
+            min-height: 30px;
+        }
+        div.item:nth-child(2){
+            min-height: 20px;
+        }
+        div.item:nth-child(3){
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+<h1>align-self</h1>
+<div class="flex-container">
+    <div class="chilld">
+        <div class="flex-container1">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+
+        </div>
+        <div class="note">stretch</div>
+    </div>
+    <div class="chilld">
+        <div class="flex-container2">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+
+        </div>
+        <div class="note">center</div>
+    </div>
+
+    <div class="chilld">
+        <div class="flex-container3">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        <div class="note">flex-start</div>
+    </div>
+
+
+    <div class="chilld">
+        <div class="flex-container4">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+
+        </div>
+        <div class="note">flex-end</div>
+    </div>
+
+    <div class="chilld">
+        <div class="flex-container5">
+            <div class="item">1</div>
+            <div class="item" style="font-size: 2em">2</div>
+            <div class="item">3</div>
+        </div>
+        <div class="note">baseline</div>
+    </div>
+
+
+</div>
+</body>
+</html>
